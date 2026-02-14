@@ -12,29 +12,34 @@ GET /api
 Response
 The API returns a JSON object with a single quote field.
 
-JSON
+```JSON
 {
   "quote": "Pride is not the opposite of shame, but its source. True humility is the only antidote to shame."
 }
+```
+
 🛠 Code Examples
 Here is how you can use Iroh's wisdom in your own applications.
 
 JavaScript (Fetch)
-JavaScript
-fetch('https://[your-vercel-url].vercel.app/api')
+```JavaScript
+fetch('https://iroh-rest.vercel.app/api')
     .then(response => response.json())
     .then(data => {
         console.log(data.quote);
     });
+```
 Python
-Python
+```Python
 import requests
 
-response = requests.get('https://[your-vercel-url].vercel.app/api')
+response = requests.get('https://iroh-rest.vercel.app/api')
 print(response.json()['quote'])
+```
 cURL
-Bash
-curl https://[your-vercel-url].vercel.app/api
+```Bash
+curl https://iroh-rest.vercel.app/api
+```
 ☕ Contributing
 "While it is always best to believe in oneself, a little help from others can be a great blessing."
 
