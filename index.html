@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iroh.REST</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; background-color: #f0f0f0; }
+        h1 { color: #d35400; }
+        #quote { font-style: italic; font-size: 1.5em; margin: 20px; }
+        button { padding: 10px 20px; font-size: 1em; cursor: pointer; background: #d35400; color: white; border: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>🍵 Iroh.REST</h1>
+    <p id="quote">Loading wisdom...</p>
+    <button onclick="getTea()">New Quote</button>
+
+    <script>
+        async function getTea() {
+            const response = await fetch('/api');
+            const data = await response.json();
+            document.getElementById('quote').innerText = data.quote;
+        }
+        getTea();
+    </script>
+</body>
+</html>
